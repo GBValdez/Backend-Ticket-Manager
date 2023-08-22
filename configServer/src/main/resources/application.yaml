@@ -1,0 +1,17 @@
+# El puerto que tendra la configuracion
+server:
+  port: 8081
+#Le decimos en que repositorio se va a encontrar el proyecto completo
+#y que ramas estamos utilizando
+#Tambien le decimos a la configuracion de donde se van a sacar las propiedades
+#de cada microservicio
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/GBValdez/Backend-Ticket-Manager
+          search-paths: Config-Data
+  application:
+    name: Config-Service
